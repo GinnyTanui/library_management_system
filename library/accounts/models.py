@@ -2,13 +2,13 @@ from django.db import models
 from django.contrib.auth.models import AbstractUser, BaseUserManager
 # Create your models here.
 class CustomUserManager(BaseUserManager):
-    def create_users(self, username , email, password=None, **extra_fields):
+    def create_user(self, username , email, password=None, **extra_fields):
         if not email:
             raise ValueError("The email is required")
         email = self.normalize_email(email)
         extra_fields.setdefault("is_active", True) 
         user = self.model(username=username, email=email, **extra_fields)
-        user.set_password(password) 
+        user.set_password(password)  ##here you arre calling , saving and hashing your password atthe same time
         user.save(using=self._db) 
         return user 
     
@@ -38,7 +38,7 @@ class CustomUser(AbstractUser):
     ROLECHOICES = [
         ("ADMIN", "Admin"), 
         ("LIBRARIAN", "Librarian"),
-        ("Member", "Member")
+        ("MEMBER", "Member")
     ]
     username = models.CharField(max_length=150, unique=True)
     email = models.EmailField(unique=True) 

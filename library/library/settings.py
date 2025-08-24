@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'accounts',
     'rest_framework',
     'rest_framework.authtoken',
+    'book'
 ]
 
 AUTH_USER_MODEL = 'accounts.CustomUser'
