@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-x)#yj^*=5k=i+ds8ldi9$cz(lf5^+*w400!#nl6!by98rzz2*l
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['GinnyTanui.pythonanywhere.com']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -78,27 +78,26 @@ WSGI_APPLICATION = 'library.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': 'library_system',
-#         'USER': 'root',
-#         'PASSWORD': 'ginnytanui2005!',
-#         'HOST': 'localhost',
-#         'PORT': '3306',
-#     }
-# } 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'GinnyTanui$default',   # your actual DB name
-        'USER': 'GinnyTanui',           # your PythonAnywhere username
-        'PASSWORD': 'StrongPass123',    # the password you set in the Databases tab
-        'HOST': 'GinnyTanui.mysql.pythonanywhere-services.com',  # NOT localhost
+        'NAME': 'library_system',
+        'USER': 'root',
+        'PASSWORD': 'ginnytanui2005!',
+        'HOST': 'localhost',
         'PORT': '3306',
     }
-}
-
+} 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'GinnyTanui$default',   # your actual DB name
+#         'USER': 'GinnyTanui',           # your PythonAnywhere username
+#         'PASSWORD': 'StrongPass123',    # the password you set in the Databases tab
+#         'HOST': 'GinnyTanui.mysql.pythonanywhere-services.com',  # NOT localhost
+#         'PORT': '3306',
+#     }
+# }
 
 
 # Password validation
