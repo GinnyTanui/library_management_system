@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-x)#yj^*=5k=i+ds8ldi9$cz(lf5^+*w400!#nl6!by98rzz2*l
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['GinnyTanui.pythonanywhere.com']
 
 
 # Application definition
@@ -81,9 +81,9 @@ WSGI_APPLICATION = 'library.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'library_system',         # Use the same name you created
-        'USER': 'root',                 # Or whatever MySQL user you use
-        'PASSWORD': 'ginnytanui2005!',   # Replace with your MySQL password
+        'NAME': 'library_system',
+        'USER': 'root',
+        'PASSWORD': 'ginnytanui2005!',
         'HOST': 'localhost',
         'PORT': '3306',
     }
