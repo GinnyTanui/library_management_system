@@ -78,13 +78,23 @@ WSGI_APPLICATION = 'library.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'library_system',
+#         'USER': 'root',
+#         'PASSWORD': 'ginnytanui2005!',
+#         'HOST': 'localhost',
+#         'PORT': '3306',
+#     }
+# } 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'library_system',
-        'USER': 'root',
-        'PASSWORD': 'ginnytanui2005!',
-        'HOST': 'localhost',
+        'NAME': 'GinnyTanui$default',   # your actual DB name
+        'USER': 'GinnyTanui',           # your PythonAnywhere username
+        'PASSWORD': 'StrongPass123',    # the password you set in the Databases tab
+        'HOST': 'GinnyTanui.mysql.pythonanywhere-services.com',  # NOT localhost
         'PORT': '3306',
     }
 }
