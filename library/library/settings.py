@@ -84,29 +84,36 @@ WSGI_APPLICATION = 'library.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
-import os
+import os 
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
 
 
-if 'PYTHONANYWHERE_DOMAIN' in os.environ:
-    # Running on PythonAnywhere → use SQLite
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': BASE_DIR / 'db.sqlite3',
-        }
-    }
-else:
-    # Local machine → use MySQL
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.mysql',
-            'NAME': 'library_system',
-            'USER': 'root',
-            'PASSWORD': 'ginnytanui2005!',
-            'HOST': '127.0.0.1',
-            'PORT': '3306',
-        }
-    }
+# if 'PYTHONANYWHERE_DOMAIN' in os.environ:
+#     # Running on PythonAnywhere → use SQLite
+#     DATABASES = {
+#         'default': {
+#             'ENGINE': 'django.db.backends.sqlite3',
+#             'NAME': BASE_DIR / 'db.sqlite3',
+#         }
+#     } 
+# else:
+#     # Local machine → use MySQL
+#     DATABASES = {
+#         'default': {
+#             'ENGINE': 'django.db.backends.mysql',
+#             'NAME': 'library_system',
+#             'USER': 'root',
+#             'PASSWORD': 'ginnytanui2005!',
+#             'HOST': '127.0.0.1',
+#             'PORT': '3306',
+#         }
+#     }
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.mysql',
