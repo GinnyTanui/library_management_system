@@ -1,20 +1,69 @@
-# library_management_system
-Django Library Management System
+Library Management System
 
-This is my Django capstone project that implements a Library Management System with custom authentication and role-based access.
+A Django-based Library Management System with custom authentication and role-based access control. This project was built as a capstone project and deployed on PythonAnywhere.
 
-Features
+🚀 Features
 
-Custom User Model with roles: Admin, Librarian, and Member (default).
+Custom User Model with Roles
 
-User Authentication: Register, login, and logout using Django’s built-in authentication system.
+Admin – Full control over system.
 
-User Profile Management: Each user has a profile that can be updated.
+Librarian – Manage books and transactions.
 
-Signals: Automatically creates a profile when a new user registers.
+Member (default) – Borrow and view books.
 
-Role-Based Permissions: Different access levels for Admin, Librarian, and Member.
+Authentication & Profiles
 
-Token-Based API Authentication (in progress).
+User registration, login, and logout using Django’s authentication system.
 
-Books App (coming soon): Manage books and connect with users.
+Automatic profile creation via Django signals.
+
+Users can update their profiles.
+
+Role-Based Permissions
+
+Access levels based on role:
+
+Admin → System-wide management.
+
+Librarian → Books & transactions.
+
+Member → Borrow books, view history.
+
+Books Management
+
+Add, update, and delete books (Admin/Librarian).
+
+Members can view available books.
+
+Transactions & Borrowing History
+
+Track book borrow and return.
+
+Members can view their own borrowing history.
+
+Librarians/Admins can manage all transactions.
+
+Error Handling & Bug Fixes
+
+Improved validation and error messages.
+
+Fixed permission-related issues.
+
+Deployment
+
+Successfully deployed on PythonAnywhere.
+
+API Support (Work in Progress)
+
+Token-based API authentication for future integration.
+
+🛠️ Tech Stack
+
+Backend: Django (Python)
+
+Database: SQLite (development)
+
+Authentication: Django’s built-in system + custom roles
+
+Deployment: PythonAnywhere
